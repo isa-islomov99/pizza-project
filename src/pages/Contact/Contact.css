@@ -389,7 +389,7 @@ textarea::placeholder {
   }
 }
 
-@media (min-width: 400px) and (max-width: 500px) {
+@media (min-width: 330px) and (max-width: 500px) {
   .left-side-info {
     margin-left: 0px;
   }

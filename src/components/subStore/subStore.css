@@ -121,10 +121,10 @@
 
 @media (min-width: 320px) and (max-width: 411px) {
   .data-label {
-    font-size: 12px;
+    font-size: 14px;
   }
   .subStore-cost {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 

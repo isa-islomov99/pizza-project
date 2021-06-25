@@ -395,7 +395,7 @@ li {
   }
 }
 
-@media (min-width: 400px) and (max-width: 500px) {
+@media (min-width: 330px) and (max-width: 500px) {
   .img-txt-top {
     margin: 0 auto;
     width: 90%;

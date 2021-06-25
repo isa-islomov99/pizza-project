@@ -157,7 +157,7 @@
   }
 }
 
-@media (min-width: 400px) and (max-width: 500px) {
+@media (min-width: 330px) and (max-width: 500px) {
   .inner-txt {
     padding: 23px;
     display: grid;
