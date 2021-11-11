@@ -7,7 +7,6 @@ const initialState = {
   foods:[], 
   modal: false,
   modalInfo : "",
-
 };
 
 const cardData = (state = initialState, action) => {
@@ -68,7 +67,7 @@ const cardData = (state = initialState, action) => {
             };
 
         default:
-          return state;
+          return state; 
   }
 };
 export default cardData;

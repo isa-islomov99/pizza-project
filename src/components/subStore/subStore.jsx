@@ -100,7 +100,3 @@ const SubStore = () => {
 };
 
 export default SubStore;
-
-
-
-// created by Ravshan

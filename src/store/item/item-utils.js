@@ -49,11 +49,3 @@ export const promaCodeMinusCost = (food, newFood) =>{
     
       
 };
-
-
-
-
-
-
-
-// created by Ravshan

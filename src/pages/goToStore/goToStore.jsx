@@ -367,7 +367,7 @@ const GoToStore = () => {
                       <NumberFormat
                         required={true}
                         {...field}
-                        format="+998 (##) ###-####"
+                        format="+998 ## ###-####"
                         allowEmptyFormatting
                         mask="_"
                         customInput={TextField}
@@ -513,164 +513,172 @@ const GoToStore = () => {
             </form>
           </div>
         );
-      case 2:
+      // case 2:
+      //   return (
+      //     <div>
+      //       <p className="store_korzenkaText"> payment</p>
+      //       <form
+      //         className="Three_store_form"
+      //         onSubmit={handleSubmit(onSubmit)}
+      //       >
+      //         <Card className={classes.BankCard}>
+      //           <div className="bank_card_img_blok">
+      //             <div className="bank_card_imges ">
+      //               <img style={{ width: "100%", height: "60%" }} src={payme} />
+      //             </div>
+      //             <div className="bank_card_imges">
+      //               <img style={{ width: "100%", height: "60%" }} src={visa} />
+      //             </div>
+      //             <div className="bank_card_imges">
+      //               <img style={{ width: "100%", height: "60%" }} src={mir} />
+      //             </div>
+      //             <div className="bank_card_imges">
+      //               <img
+      //                 style={{ width: "100%", height: "60%" }}
+      //                 src={masterCard}
+      //               />
+      //             </div>
+      //           </div>
+      //           <div className="bank_card_coders_zero_item">
+      //             <Controller
+      //               render={({ field }) => (
+      //                 <NumberFormat
+      //                   required={true}
+      //                   {...field}
+      //                   format="#### #### #### ####"
+      //                   allowEmptyFormatting
+      //                   mask="_"
+      //                   customInput={TextField}
+      //                   className={classes.cardCode}
+      //                 />
+      //                 // <TextField
+      //                 //   className={classes.cardCode}
+      //                 //   type="number"
+      //                 //   required={true}
+      //                 //   {...field}
+      //                 //   label="Card Code"
+      //                 // />
+      //               )}
+      //               name="card code"
+      //               control={control}
+      //             />
+      //           </div>
+      //           <div className="bank_card_codes_blok">
+      //             <div className="bank_card_codes_one_item">
+      //               <Controller
+      //                 render={({ field }) => (
+      //                   <TextField
+      //                     className={classes.MMYY}
+      //                     type="number"
+      //                     required={true}
+      //                     {...field}
+      //                     label="MM"
+      //                   />
+      //                 )}
+      //                 name="MM Code"
+      //                 control={control}
+      //               />
+      //               <div className="card_slesh">
+      //                 <h3>/</h3>
+      //               </div>
+      //               <Controller
+      //                 render={({ field }) => (
+      //                   <TextField
+      //                     className={classes.MMYY}
+      //                     type="number"
+      //                     required={true}
+      //                     {...field}
+      //                     label="YY"
+      //                   />
+      //                 )}
+      //                 name="YY Code"
+      //                 control={control}
+      //               />
+      //             </div>
+      //             <div className="bank_card_codes_two_item">
+      //               <Controller
+      //                 render={({ field }) => (
+      //                   <TextField
+      //                     className={classes.CVC}
+      //                     type="password"
+      //                     required={true}
+      //                     {...field}
+      //                     label="CVC"
+      //                   />
+      //                 )}
+      //                 name="CVC Code"
+      //                 control={control}
+      //               />
+
+      //               <InfoOutlinedIcon onClick={handleClick} />
+      //               <Popover
+      //                 id={id}
+      //                 open={open}
+      //                 anchorEl={anchorEl}
+      //                 onClose={handleClose}
+      //                 anchorOrigin={{
+      //                   vertical: "bottom",
+      //                   horizontal: "center",
+      //                 }}
+      //                 transformOrigin={{
+      //                   vertical: "top",
+      //                   horizontal: "center",
+      //                 }}
+      //               >
+      //                 <Typography className={classes.typography}>
+      //                   CVV is indicated on the back
+      //                 </Typography>
+      //               </Popover>
+      //             </div>
+      //           </div>
+      //           <div className="bank_card_codes_three_item">
+      //             <Controller
+      //               render={({ field }) => (
+      //                 <TextField
+      //                   className={classes.cardCode}
+      //                   type="text"
+      //                   required={true}
+      //                   {...field}
+      //                   label="Card Holder"
+      //                 />
+      //               )}
+      //               name="Card holder"
+      //               control={control}
+      //             />
+      //           </div>
+      //         </Card>
+      //         <div style={{marginTop:"5%"}}>
+      //           <p className="store_bankCard_Cost">
+      //           Do you agree to withdraw
+      //           {"  "} <span className="store_bankCard_Cost_red">  {new Intl.NumberFormat("en-US", { style: "decimal" }).format(toOrder.toFixed(2) / 10)} so'm</span> from your bank card? Click
+      //           the agree button to agree
+      //           </p>
+      //         </div>
+      //         <Button
+      //           disabled={activeStep === 0}
+      //           onClick={handleBack}
+      //           className={classes.backButton}
+      //         >
+      //           Back
+      //         </Button>
+      //         {/* <Link to="/"> */}
+      //         <Button type="submit" className={classes.finishedBtn}>
+      //           consent
+      //         </Button>
+      //         {/* </Link> */}
+      //       </form>
+      //     </div>
+      //   );
+      default:
         return (
           <div>
-            <p className="store_korzenkaText"> payment</p>
-            <form
-              className="Three_store_form"
-              onSubmit={handleSubmit(onSubmit)}
-            >
-              <Card className={classes.BankCard}>
-                <div className="bank_card_img_blok">
-                  <div className="bank_card_imges ">
-                    <img style={{ width: "100%", height: "60%" }} src={payme} />
-                  </div>
-                  <div className="bank_card_imges">
-                    <img style={{ width: "100%", height: "60%" }} src={visa} />
-                  </div>
-                  <div className="bank_card_imges">
-                    <img style={{ width: "100%", height: "60%" }} src={mir} />
-                  </div>
-                  <div className="bank_card_imges">
-                    <img
-                      style={{ width: "100%", height: "60%" }}
-                      src={masterCard}
-                    />
-                  </div>
-                </div>
-                <div className="bank_card_coders_zero_item">
-                  <Controller
-                    render={({ field }) => (
-                      <NumberFormat
-                        required={true}
-                        {...field}
-                        format="#### #### #### ####"
-                        allowEmptyFormatting
-                        mask="_"
-                        customInput={TextField}
-                        className={classes.cardCode}
-                      />
-                      // <TextField
-                      //   className={classes.cardCode}
-                      //   type="number"
-                      //   required={true}
-                      //   {...field}
-                      //   label="Card Code"
-                      // />
-                    )}
-                    name="card code"
-                    control={control}
-                  />
-                </div>
-                <div className="bank_card_codes_blok">
-                  <div className="bank_card_codes_one_item">
-                    <Controller
-                      render={({ field }) => (
-                        <TextField
-                          className={classes.MMYY}
-                          type="number"
-                          required={true}
-                          {...field}
-                          label="MM"
-                        />
-                      )}
-                      name="MM Code"
-                      control={control}
-                    />
-                    <div className="card_slesh">
-                      <h3>/</h3>
-                    </div>
-                    <Controller
-                      render={({ field }) => (
-                        <TextField
-                          className={classes.MMYY}
-                          type="number"
-                          required={true}
-                          {...field}
-                          label="YY"
-                        />
-                      )}
-                      name="YY Code"
-                      control={control}
-                    />
-                  </div>
-                  <div className="bank_card_codes_two_item">
-                    <Controller
-                      render={({ field }) => (
-                        <TextField
-                          className={classes.CVC}
-                          type="password"
-                          required={true}
-                          {...field}
-                          label="CVC"
-                        />
-                      )}
-                      name="CVC Code"
-                      control={control}
-                    />
-
-                    <InfoOutlinedIcon onClick={handleClick} />
-                    <Popover
-                      id={id}
-                      open={open}
-                      anchorEl={anchorEl}
-                      onClose={handleClose}
-                      anchorOrigin={{
-                        vertical: "bottom",
-                        horizontal: "center",
-                      }}
-                      transformOrigin={{
-                        vertical: "top",
-                        horizontal: "center",
-                      }}
-                    >
-                      <Typography className={classes.typography}>
-                        CVV is indicated on the back
-                      </Typography>
-                    </Popover>
-                  </div>
-                </div>
-                <div className="bank_card_codes_three_item">
-                  <Controller
-                    render={({ field }) => (
-                      <TextField
-                        className={classes.cardCode}
-                        type="text"
-                        required={true}
-                        {...field}
-                        label="Card Holder"
-                      />
-                    )}
-                    name="Card holder"
-                    control={control}
-                  />
-                </div>
-              </Card>
-              <div style={{marginTop:"5%"}}>
-                <p className="store_bankCard_Cost">
-                Do you agree to withdraw  
-                {"  "} <span className="store_bankCard_Cost_red">  {new Intl.NumberFormat("en-US", { style: "decimal" }).format(toOrder.toFixed(2) / 10)} so'm</span> from your bank card? Click
-                the agree button to agree
-                </p>
-              </div>
-              <Button
-                disabled={activeStep === 0}
-                onClick={handleBack}
-                className={classes.backButton}
-              >
-                Back
-              </Button>
-              {/* <Link to="/"> */}
-              <Button type="submit" className={classes.finishedBtn}>
-                consent
-              </Button>
-              {/* </Link> */}
-            </form>
+            <h2 style={{marginTop: '3rem', marginBottom: '2rem'}}>
+              Siz barcha bosqishlarni to'liq tuldirdingiz va Buyurtmangiz yaqin
+              1 soat ichida yetkazib beriladi. Haridingiz va Bizning kampaniya mahsulotini tanlaganingiz uchun tashakkur
+            </h2>
+            <Link to="/"><button style={{padding: '0.5rem'}}>Back</button></Link>
           </div>
         );
-      default:
-        return <Link to="/">Back</Link>;
     }
   }
 
